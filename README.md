@@ -4,7 +4,7 @@ A intenção foi desenvolver uma interface de usuário para o código desenvolvi
 
 <p>Inicialmente o código desafio.py foi alterado para ao invés de gerar respostas com base em uma caixa de texto no próprio código, gerar respostas com base em entradas do usuário;</p>
 <p>As modificações no código foram seguindo as instruções presentes no quickstar da API https://ai.google.dev/gemini-api/docs/get-started/tutorial?lang=python&hl=pt-br#setup_your_api_key;</p>
-<p>>No Ambiente Virtual do projeto, foi adicionada uma instalção da biblioteca Flask;</p>
+<p>No Ambiente Virtual do projeto, foi adicionada uma instalção da biblioteca Flask;</p>
 <p>Após a alteração no código, um novo arquivo .py foi gerado, sendo a base do backending para a interface web, o qual utiliza da biblioteca adicionada;</p>
 <p>Após o desenvolvimento das rotas e integração entre o código contendo o back da interface e o código contendo a API, foi necessário desenvolver o frontending da interface;</p>
 <p>Em uma pasta nomeada Templates, foram armazenados os códigos html da interface;</p>
