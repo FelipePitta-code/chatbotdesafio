@@ -2,12 +2,18 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
 
+load_dotenv()
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
-
-
 model = genai.GenerativeModel('gemini-1.5-flash')
-response = model.generate_content("The opposite of hot is")
-print(response.text)
+chat = model.start_chat(history=[])
+
+def resposta(user_input):
+
+    response = model.generate_content(user_input)
+    return response.text
+
+
+
+
