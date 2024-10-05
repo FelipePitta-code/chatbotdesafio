@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot InfoBio Jr - Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <h2>Chat com o InfoBio Jr</h2>
+            <div class="chat-history">
+                {% for message in messages %}
+                    <div class="message user-message">
+                        <strong>Você:</strong> {{ message.user }}
+                    </div>
+                    <div class="message bot-message">
+                        <strong>Bot:</strong> {{ message.bot }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Formulário para enviar mensagens -->
+            <form method="POST">
+                <input type="text" name="user_input" placeholder="Digite sua mensagem..." required>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Botão de retorno para a página inicial -->
+            <form action="{{ url_for('homepage') }}" method="GET">
+                <button type="submit" class="back-button">Voltar à Página Inicial</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

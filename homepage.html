@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatBot InfoBio Jr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bem vindo ao ChatBot da InfoBio Jr</h1>
+      <form method="post">
+          <label for="user_input">Converse com nosso chatbot:</label><br>
+          <input type="text" id="user_input" name="user_input" placeholder="Mensagem para o chatbot"> 
+          <button type="submit">Enviar</button>
+      </form>
+      {% if resposta %}
+      <h2>Resposta Gerada:</h2>
+      <p>{{ resposta }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
